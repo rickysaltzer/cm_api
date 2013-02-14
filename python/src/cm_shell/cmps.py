@@ -178,6 +178,9 @@ class ClouderaShell(cmd.Cmd):
         else:
             self.do_show("services")
 
+    def do_ls(self, service):
+        self.do_status(service)
+
     def do_log(self, role):
         """
         Download log file for role
