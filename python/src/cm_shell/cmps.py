@@ -630,6 +630,7 @@ def main():
     if args.execute:
         EXECUTE = True
         shell = ClouderaShell()
+        shell.preloop()
         for command in args.execute.split(';'):
             shell.onecmd(command)
         sys.exit(0)
